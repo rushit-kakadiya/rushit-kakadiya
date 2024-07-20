@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-### 🐍 &nbsp;That's How Commits move ...
+### 🐍 &nbsp;That's How Commits move...
 
 <div align="center">
   <a href="https://github.com/rushit-kakadiya/">
