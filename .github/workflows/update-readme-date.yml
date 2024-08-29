@@ -1,0 +1,30 @@
+name: Update README with Date
+
+# Controls when the workflow will run
+on:
+  # Schedule the workflow to run at 00:00 UTC every day
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out your repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v4
+
+      # Updates the date in the README.md file
+      - name: Update README with Date
+        run: |
+          DATE=$(date '+%Y-%m-%d')
+          sed -i "s/Last updated: .*/Last updated: $DATE/" README.md
+
+      # Commits and pushes the changes
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Updated date in README.md to $DATE"
+          git push origin main
