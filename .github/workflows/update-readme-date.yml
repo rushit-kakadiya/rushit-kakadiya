@@ -4,7 +4,7 @@ name: Update README with Date
 on:
   # Schedule the workflow to run at 00:00 UTC every day
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '* * * * *'
 
 jobs:
   update-readme:
