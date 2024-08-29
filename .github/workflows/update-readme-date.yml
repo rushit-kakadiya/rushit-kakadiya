@@ -17,8 +17,8 @@ jobs:
       # Updates the date in the README.md file
       - name: Update README with Date
         run: |
-          DATE=$(date '+%Y-%m-%d')
-          sed -i "s/Last updated: .*/Last updated: $DATE/" README.md
+          DATETIME=$(date '+%Y-%m-%d %H:%M:%S UTC')
+          sed -i "s/Last updated: .*/Last updated: $DATETIME/" README.md
 
       # Commits and pushes the changes
       - name: Commit and Push Changes
