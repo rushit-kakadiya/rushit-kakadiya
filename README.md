@@ -30,6 +30,3 @@
     <img src="https://github.com/rushit-kakadiya/rushit-kakadiya/blob/main/assets/img/grid-snake.svg" alt="snake" />
   </a>
 </div>
-
----
-### Last updated: 2024-08-29
